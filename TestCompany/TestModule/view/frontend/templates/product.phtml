@@ -1,0 +1,15 @@
+<?php
+
+/** @var Magento\Framework\View\Element\Template $this */
+
+$viewModel = $this->getData('entityDataViewModel');
+
+/** @var TestCompany\TestModule\ViewModel\EntityData $viewModel*/
+
+echo "loaded from factory";
+echo "<br><br>";
+var_dump($viewModel->getProductsFromFactory()->getData());
+
+echo "<br><br>";
+echo "loaded from repository";
+var_dump($viewModel->getProductsFromRepository()->getData());

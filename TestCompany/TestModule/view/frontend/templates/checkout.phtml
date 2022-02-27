@@ -1,0 +1,19 @@
+<?php
+
+/** @var Magento\Framework\View\Element\Template $this */
+
+$viewModel = $this->getData('entityDataViewModel');
+
+/** @var TestCompany\TestModule\ViewModel\EntityData $viewModel*/
+
+echo "loaded from checkout session";
+echo "<br><br>";
+
+var_dump($viewModel->getCheckoutSessionData()->getQuote()->getItems());
+
+echo "loaded from catalog session";
+echo "<br><br>";
+
+var_dump($viewModel->getCatalogSessionData()->getData());
+
+

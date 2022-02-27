@@ -1,0 +1,13 @@
+<?php
+
+/** @var Magento\Framework\View\Element\Template $this */
+
+$viewModel = $this->getData('entityDataViewModel');
+
+/** @var TestCompany\TestModule\ViewModel\EntityData $viewModel*/
+
+echo "session data";
+echo "<br><br>";
+
+var_dump($viewModel->getCustomerSessionData()->getCustomer()->getData());
+
